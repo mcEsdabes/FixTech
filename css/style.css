@@ -707,17 +707,36 @@
 
 @media (max-width: 576px) {
 
+  /* Зменшуємо загальні відступи шапки */
+  .header {
+    padding: 8px 0;
+  }
+
+  /* Менша відстань між логотипом, меню та кнопкою */
   .header__container,
   .footer__container {
     flex-direction: column;
     text-align: center;
+    gap: 10px;
   }
 
+  /* Трохи менший логотип */
+  .header__logo {
+    font-size: 22px;
+  }
+
+  /* Компактніше меню */
   .nav__list {
     justify-content: center;
-    gap: 14px;
+    gap: 12px;
   }
 
+  .nav__link {
+    font-size: 14px;
+    padding: 4px 0;
+  }
+
+  /* Існуючий стиль для карток на мобільному */
   .service-card {
     flex-direction: column;
     align-items: flex-start;
