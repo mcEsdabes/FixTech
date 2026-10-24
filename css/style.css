@@ -707,36 +707,45 @@
 
 @media (max-width: 576px) {
 
-  /* Зменшуємо загальні відступи шапки */
+  /* Мінімальні відступи для шапки */
   .header {
-    padding: 8px 0;
+    padding: 5px 0;
   }
 
-  /* Менша відстань між логотипом, меню та кнопкою */
-  .header__container,
+  .header__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    /* Максимально стискаємо елементи */
+  }
+
+  .header__logo {
+    font-size: 20px;
+  }
+
+  /* Ховаємо кнопку в шапці на мобільних, щоб зекономити місце */
+  .header__actions {
+    display: none;
+  }
+
+  /* Робимо меню дрібнішим і щільнішим */
+  .nav__list {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav__link {
+    font-size: 13px;
+    padding: 2px 0;
+  }
+
+  /* Існуючий стиль для карток і футера */
   .footer__container {
     flex-direction: column;
     text-align: center;
     gap: 10px;
   }
 
-  /* Трохи менший логотип */
-  .header__logo {
-    font-size: 22px;
-  }
-
-  /* Компактніше меню */
-  .nav__list {
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .nav__link {
-    font-size: 14px;
-    padding: 4px 0;
-  }
-
-  /* Існуючий стиль для карток на мобільному */
   .service-card {
     flex-direction: column;
     align-items: flex-start;
