@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <title>Послуги та прайс-лист — FixTech</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="page">
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="header__container container">
+      <a class="header__logo" href="index.html">
+        <span class="header__logo-accent">Fix</span>Tech
+      </a>
+
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Головна</a></li>
+          <li class="nav__item"><a class="nav__link nav__link--active" href="service.html">Послуги та ціни</a></li>
+          <li class="nav__item"><a class="nav__link" href="about.html">Про сервіс</a></li>
+          <li class="nav__item"><a class="nav__link" href="contact.html">Залишити заявку</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="contact.html" class="btn btn--primary">Замовити ремонт</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="services section">
+      <div class="container">
+        <div class="section__header">
+          <h1 class="section__title">Каталог послуг сервісного центру</h1>
+          <p class="section__subtitle">Скористайтеся пошуком, щоб швидко знайти потрібну послугу або деталь</p>
+        </div>
+
+        <!-- БЛОК ЖИВОГО ПОШУКУ (Блок search-box) -->
+        <div class="search-box">
+          <div class="search-box__controls">
+            <input type="text" id="serviceSearchInput" class="search-box__input"
+              placeholder="Введіть назву послуги (наприклад: матриця, чистка, BIOS, дані)..." />
+            <select id="categoryFilter" class="search-box__select">
+              <option value="all">Усі категорії техніки</option>
+              <option value="laptop">Ноутбуки</option>
+              <option value="pc">Стаціонарні ПК</option>
+              <option value="board">Пайка та плати</option>
+              <option value="data">Відновлення даних</option>
+            </select>
+          </div>
+          <p id="searchResultCount" class="search-box__status">Відображено всі послуги (6)</p>
+        </div>
+
+        <!-- СІТКА ОБ'ЄКТІВ ПОСЛУГ У ДВА СТОВПЧИКИ -->
+        <div id="servicesGrid" class="services__grid">
+
+          <!-- Послуга 1 -->
+          <article class="service-card" data-category="laptop">
+            <div class="service-card__img-box">
+              <img src="images/s1.png" alt="Профілактика та чистка ноутбука" class="service-card__img">
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__number">Послуга #1</span>
+              <h3 class="service-card__title">Чистка ноутбука та заміна термопасти</h3>
+              <p class="service-card__desc">Повне розбирання пристрою, видалення пилу з радіаторів та кулера, нанесення
+                термопасти Arctic MX-6.</p>
+              <p class="service-card__more service-card__more--hidden">
+                Додатково проводиться змащування осі вентилятора, перевірка теплових трубок та стрес-тестування
+                процесора й відеокарти в AIDA64 протягом 30 хвилин. Термін виконання: 2–3 години.
+              </p>
+              <div class="service-card__footer">
+                <span class="service-card__price">650 грн</span>
+                <button type="button" class="btn btn--small js-toggle-more">Більше</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Послуга 2 -->
+          <article class="service-card" data-category="laptop">
+            <div class="service-card__img-box">
+              <img src="images/s2.png" alt="Заміна матриці ноутбука" class="service-card__img">
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__number">Послуга #2</span>
+              <h3 class="service-card__title">Заміна розбитої матриці (екрана)</h3>
+              <p class="service-card__desc">Демонтаж пошкодженого дисплея та встановлення нової оригінальної IPS або
+                OLED матриці.</p>
+              <p class="service-card__more service-card__more--hidden">
+                Перед встановленням обов'язково відключається лінія живлення та перевіряється цілісність шлейфа
+                LVDS/eDP. Надається гарантія на відсутність битих пікселів. Термін виконання: 1 день.
+              </p>
+              <div class="service-card__footer">
+                <span class="service-card__price">800 грн + деталь</span>
+                <button type="button" class="btn btn--small js-toggle-more">Більше</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Послуга 3 -->
+          <article class="service-card" data-category="board">
+            <div class="service-card__img-box">
+              <img src="images/s3.png" alt="Ремонт материнської плати" class="service-card__img">
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__number">Послуга #3</span>
+              <h3 class="service-card__title">Компонентний ремонт материнських плат</h3>
+              <p class="service-card__desc">Відновлення ланцюгів живлення після залиття рідиною або короткого замикання,
+                BGA-пайка чіпів.</p>
+              <p class="service-card__more service-card__more--hidden">
+                Включає ультразвукову ванну, заміну мультиконтролерів, мосфетів, ШІМ-контролерів, а також прошивку
+                мікросхем BIOS/UEFI на програматорі. Термін виконання: 2–4 дні.
+              </p>
+              <div class="service-card__footer">
+                <span class="service-card__price">від 1500 грн</span>
+                <button type="button" class="btn btn--small js-toggle-more">Більше</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Послуга 4 -->
+          <article class="service-card" data-category="data">
+            <div class="service-card__img-box">
+              <img src="images/s4.png" alt="Відновлення даних" class="service-card__img">
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__number">Послуга #4</span>
+              <h3 class="service-card__title">Відновлення даних з HDD, SSD та флешок</h3>
+              <p class="service-card__desc">Вилучення втрачених файлів після форматування, пошкодження файлової системи
+                чи збою контролера.</p>
+              <p class="service-card__more service-card__more--hidden">
+                Робота виконується на програмно-апаратному комплексі PC-3000 з посекторним клонуванням накопичувача.
+                Повна конфіденційність даних клієнта. Термін виконання: 1–3 дні.
+              </p>
+              <div class="service-card__footer">
+                <span class="service-card__price">від 900 грн</span>
+                <button type="button" class="btn btn--small js-toggle-more">Більше</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Послуга 5 -->
+          <article class="service-card" data-category="pc">
+            <div class="service-card__img-box">
+              <img src="images/s1.png" alt="Встановлення ОС та ПЗ" class="service-card__img">
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__number">Послуга #5</span>
+              <h3 class="service-card__title">Встановлення Windows, Linux та драйверів</h3>
+              <p class="service-card__desc">Чисте встановлення операційної системи зі збереженням користувацьких файлів
+                та налаштуванням BIOS.</p>
+              <p class="service-card__more service-card__more--hidden">
+                Оновлення всіх офіційних драйверів чіпсета та відеокарти, базовий пакет офісних програм та антивірусний
+                захист. Термін виконання: 2 години.
+              </p>
+              <div class="service-card__footer">
+                <span class="service-card__price">500 грн</span>
+                <button type="button" class="btn btn--small js-toggle-more">Більше</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Послуга 6 -->
+          <article class="service-card" data-category="board">
+            <div class="service-card__img-box">
+              <img src="images/s2.png" alt="Заміна роз'ємів живлення" class="service-card__img">
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__number">Послуга #6</span>
+              <h3 class="service-card__title">Заміна роз'ємів USB, Type-C, HDMI та живлення</h3>
+              <p class="service-card__desc">Акуратний демонтаж розхитаного або зламаного гнізда зарядки та пайка нового
+                порту.</p>
+              <p class="service-card__more service-card__more--hidden">
+                Відновлення обірваних контактних доріжок на платі під мікроскопом і зміцнення корпусу роз'єму. Термін
+                виконання: 3–5 годин.
+              </p>
+              <div class="service-card__footer">
+                <span class="service-card__price">600 грн</span>
+                <button type="button" class="btn btn--small js-toggle-more">Більше</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Повідомлення, якщо нічого не знайдено -->
+        <div id="noResultsMessage" class="search-box__empty search-box__empty--hidden">
+          За вашим запитом послуг не знайдено. Спробуйте змінити ключове слово.
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ПІДВАЛ -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__info">
+        <a class="footer__logo" href="index.html">FixTech</a>
+        <p class="footer__copy">© 2026 Сервісний центр «FixTech». Усі права захищено.</p>
+      </div>
+      <div class="footer__contacts">
+        <a href="tel:+380991234567" class="footer__link"><i class="fa fa-phone"></i> +38 (099) 123-45-67</a>
+        <a href="mailto:info@fixtech.ua" class="footer__link"><i class="fa fa-envelope"></i> info@fixtech.ua</a>
+        <a href="contact.html" class="footer__link"><i class="fa fa-map-marker"></i> м. Луцьк, вул. Рівненська, 48</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
